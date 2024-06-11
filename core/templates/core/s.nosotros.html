@@ -1,6 +1,16 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
+{% block head %}
+<!-- estas caracteristicas son solamente para la pagina de s.nosotros -->
+<link rel="stylesheet" href="{% static 's.nosotros.css' %}">
+<link rel="icon" href="{% static 'Imagenes/logodulceria.ico'%}">
+{% endblock %}
+
+<!-- molde incertado dentro de los html... -->
+{% block fuentes %} 
+{% endblock %}
+
 {% block content %}
     <section id = "direccion">
     <div class="ubication">

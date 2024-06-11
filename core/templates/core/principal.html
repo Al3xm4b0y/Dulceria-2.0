@@ -1,58 +1,21 @@
-
+{% extends 'core/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dulceria Los 3 Socios</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <!-- carga de contenido css en el html de principal -->
-    <link rel="stylesheet" href="{% static 'principal.css' %}">
-    <!-- agregado de icono para la cabezera de la pagina -->
-    <link rel="icon" href="{% static 'Imagenes/logodulceria.ico'%}">
-    <!-- agregado de codigo para funcionalidad de bostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- diferentes tipos de fuentes para texto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  </head>
-<body>
-    
-  <header id="inicio">
-    <!-- logo y nombre de la pagina en header -->   
-    <!-- inicio de header -->   
-    <a href="core/principal.html" class="header-logo">
-            <img src="{% static 'Imagenes/logoalex.png'%}" alt="logo dulceria">
-            <h 2 class="nombre-empresa">dulceria los 3 socios</h2>
-    </a>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-              productos
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#tarjetas">Galletas<span class="material-symbols-outlined">cookie</span></a></li>
-              <li><a class="dropdown-item" href="#carru_2">Bebidas<span class="material-symbols-outlined">water_full</span></a></li>
-              <li><a class="dropdown-item" href="#carru_3">Pasteles<span class="material-symbols-outlined">cake</span></a></li>
-            </ul>
-          </div>
-          <div class="pestanas">
-            <a href="../s.nosotros/s.nosotros.html" class="nav-linl">ubicacion</a>
-            <a href="../contactos/contactos.html" class="nav-linl">contactos</a>
-            <a href="../provedores/colaborador.html" class="nav-linl">colaboradores</a>
-            <button class="carrito"> carrito</button>
-          </div>
-      </header>
-        <!-- termino de header -->   
 
+{% block head %}
+<!-- estas caracteristicas son solamente para la pagina de principal -->
+<title>Dulceria Los 3 Socios</title>
+<!-- carga de contenido css en el html de principal -->
+<link rel="stylesheet" href="{% static 'principal.css' %}">
+<!-- agregado de icono para la cabezera de la pagina -->
+<link rel="icon" href="{% static 'Imagenes/logodulceria.ico'%}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+{% endblock %}
+
+<!-- molde incertado dentro de los html... -->
+{% block fuentes %} 
+{% endblock %}
+
+{% block content %}
     <section id="presentacion">
         
       <div id="carouselExampleCaptions" class="carousel slide">
@@ -62,24 +25,17 @@
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-      
+
             <div class="carousel-inner">
-      
               <div class="carousel-item active">
                 <img src="https://s1.eestatic.com/2015/01/30/cocinillas/cocinillas_7259352_115881205_1706x960.jpg" class="d-block w-100" alt="...">
-      
                 <div class="carousel-caption d-none d-md-block">
                   <h5 id="titulo_slide1"><b>EL MEJOR LUGAR PARA COMPRAR TUS DULCES</b></h5>
-      
                   <div class="text_slide">
                     <p>¿Estás buscando satisfacer tu antojo de dulces? ¡No busques más! En Dulcería "Los 3 Socios", te invitamos a sumergirte en un mundo de deliciosas tentaciones que deleitarán tus sentidos y endulzarán tu día</p>
-      
                   </div>  
-      
                 </div>
-      
               </div>
-      
               <div class="carousel-item">
                 <img src="https://s1.best-wallpaper.net/wallpaper/m/1607/Colorful-assorted-candy-fruit-candy-sweet-food_m.jpg" class="d-block w-100" alt="...">
       
@@ -204,163 +160,102 @@
                             <span class="material-symbols-outlined">shopping_cart</span>
                             COMPRAR
                           </button>
-                     
                         </div>
-                     
-                      </div>
-              
-                    </div>
-              
-              </div>
-              
-              <div class="carousel-item">
-              
-                <div class="card_wrapper">
-              
-                  <div class="card">
-              
+                      </div>             
+                    </div>             
+              </div>             
+              <div class="carousel-item">             
+                <div class="card_wrapper">            
+                  <div class="card">             
                     <div class="image_wrapper">
-                        <img src="https://minimayorista.cl/wp-content/uploads/2023/05/pack-4-galletas-Serranita-300x300.png" class="card-img-top" alt="...">
-              
-                      </div>
-              
+                        <img src="https://minimayorista.cl/wp-content/uploads/2023/05/pack-4-galletas-Serranita-300x300.png" class="card-img-top" alt="...">              
+                      </div>             
                       <div class="card-body">
                           <h5 class="card-title"><b>Galletas Serranitas</b></h5>
                           <p class="card-text">Exquisitas galletas Serranitas rellenas con crema sabor a limón. Esta fantástica combinación de sabores y texturas hará que al disfrutar de estas galletas tengas una experiencia inigualable.Este clásico de clásicos podrás compartirlo con tus amigos o familia y tener un grato momento </p>
-                          <h2 class="card-price"> precio : $500 </h2>
-                  
+                          <h2 class="card-price"> precio : $500 </h2>                
                           <button class="button" onclick="location.href ='../menucompra/menucom4.html'">
                             <span class="material-symbols-outlined">shopping_cart</span>
-                            COMPRAR
-                  
-                          </button>
-                  
-                        </div>
-                  
-                      </div>
-                  
+                            COMPRAR                 
+                          </button>                 
+                        </div>                  
+                      </div>                 
                       <div class="card">
-                  
                         <div class="image_wrapper">
-                        <img src="https://dojiw2m9tvv09.cloudfront.net/55351/product/coco-chip-64-grs9707.jpg" class="card-img-top" alt="...">
-                  
-                      </div>
-                  
+                        <img src="https://dojiw2m9tvv09.cloudfront.net/55351/product/coco-chip-64-grs9707.jpg" class="card-img-top" alt="...">                  
+                      </div>                
                       <div class="card-body">
                           <h5 class="card-title"><b>Galletas Coco Chip</b></h5>
                           <p class="card-text">Las galletas Coco Chip de Fruna son ideales para ti que eres amantes del coco y chocolate, ya que estas deliciosas galletas combinan la suavidad y su textura crujiente que te transportaran a vivir una experiencia excepcional Las galletas están impregnadas con el rico sabor del coco. </p>
-                          <h2 class="card-price"> precio : $500 </h2>
-                  
+                          <h2 class="card-price"> precio : $500 </h2>                 
                           <button class="button" onclick="location.href ='../menucompra/menucom5.html'">
                             <span class="material-symbols-outlined">shopping_cart</span>
-                            COMPRAR
-                  
-                          </button>
-                  
-                        </div>
-                  
-                      </div>
-                  
-                      <div class="card">
-                  
+                            COMPRAR                 
+                          </button>                 
+                        </div>                 
+                      </div>                 
+                      <div class="card">                
                         <div class="image_wrapper">
-                        <img src="https://pasomarket.cl/wp-content/uploads/2023/06/altezahelado-mckay.png" class="card-img-top" alt="...">
-                  
-                      </div>
-                  
+                        <img src="https://pasomarket.cl/wp-content/uploads/2023/06/altezahelado-mckay.png" class="card-img-top" alt="...">                  
+                      </div>                  
                       <div class="card-body">
                           <h5 class="card-title"><b>Galletas Alteza Mckay</b></h5>
                           <p class="card-text">Galletas obleas rellenas con crema sabor Helado. Sus delicadas capas con textura las hacen ideales para acompañarlas con unas copas de helado..Las galletas Alteza tienen un sabor distintivo a mantequilla que es rico, reconfortante y satisfactorio ideales para acompañar una taza de té</p>
-                          <h2 class="card-price"> precio : $1.550 </h2>
-                  
+                          <h2 class="card-price"> precio : $1.550 </h2>                 
                           <button class="button" onclick="location.href ='../menucompra/menucom6.html'">
                             <span class="material-symbols-outlined">shopping_cart</span>
-                            COMPRAR
-                  
-                          </button>
-                  
-                        </div>
-                  
-                      </div>
-                
-                    </div>
-              
-                  </div>
-              
-                  <div class="carousel-item">
-              
-                    <div class="card_wrapper">
-              
-                      <div class="card">
-              
-                        <div class="image_wrapper">
-                        <img src="https://unimarc.vtexassets.com/arquivos/ids/214261/000000000000152048-UN-02.jpg?v=637563356328470000" class="card-img-top" alt="...">
-              
-                      </div>
-              
+                            COMPRAR                 
+                          </button>                 
+                        </div>               
+                      </div>               
+                    </div>             
+                  </div>             
+                  <div class="carousel-item">             
+                    <div class="card_wrapper">             
+                      <div class="card">             
+                       <div class="image_wrapper">
+                        <img src="https://unimarc.vtexassets.com/arquivos/ids/214261/000000000000152048-UN-02.jpg?v=637563356328470000" class="card-img-top" alt="...">            
+                      </div>            
                       <div class="card-body">
                           <h5 class="card-title"><b>Galletas Costa Gretel Chocolate</b></h5>
                           <p class="card-text">Galletita rellena con crema sabor chocolate. Características: Galletas y colaciones dulces - Costa - Formato familiar - Envase bolsa - Contenido 85 g. </p>
-                          <h2 class="card-price"> precio : $1.140 </h2>
-              
+                          <h2 class="card-price"> precio : $1.140 </h2>            
                           <button class="button" onclick="location.href ='../menucompra/menucom7.html'">
                             <span class="material-symbols-outlined">shopping_cart</span>
-                            COMPRAR
-              
-                          </button>
-              
-                        </div>
-              
-                      </div>
-              
-                      <div class="card">
-              
+                            COMPRAR            
+                          </button>           
+                        </div>            
+                      </div>           
+                      <div class="card">            
                         <div class="image_wrapper">
-                        <img src="https://unimarc.vtexassets.com/arquivos/ids/211032/000000000000024572-UN-02.jpg?v=637522130967200000" class="card-img-top" alt="...">
-              
-                      </div>
-              
+                        <img src="https://unimarc.vtexassets.com/arquivos/ids/211032/000000000000024572-UN-02.jpg?v=637522130967200000" class="card-img-top" alt="...">            
+                      </div>             
                       <div class="card-body">
                           <h5 class="card-title"><b>Galletas Costa Tuareg</b></h5>
                           <p class="card-text">El mejor sabor del trópico ahora en tus galletas tuareg de siempre. Características: Galletas y colaciones dulces - Costa - Formato familiar - Envase bolsa - Contenido 120 g.<br></p>
-                          <h2 class="card-price"> precio : $580 </h2>
-              
+                          <h2 class="card-price"> precio : $580 </h2>           
                           <button class="button" onclick="location.href ='../menucompra/menucom8.html'">
                             <span class="material-symbols-outlined">shopping_cart</span>
-                            COMPRAR
-              
-                          </button>
-              
-                        </div>
-              
-                      </div>
-              
-                      <div class="card">
-              
+                            COMPRAR             
+                          </button>             
+                        </div>            
+                      </div>             
+                      <div class="card">           
                         <div class="image_wrapper">
-                        <img src="https://unimarc.vtexassets.com/arquivos/ids/237953/000000000000190995-UN-01.jpg?v=638453341073130000" class="card-img-top" alt="...">
-              
-                      </div>
-              
+                        <img src="https://unimarc.vtexassets.com/arquivos/ids/237953/000000000000190995-UN-01.jpg?v=638453341073130000" class="card-img-top" alt="...">           
+                      </div>        
                       <div class="card-body">
                           <h5 class="card-title"><b>Galletas Dos en Uno bocaditos </b></h5>
                           <p class="card-text">Bocadillos dulces con relleno sabor membrillo. Características: Galletas y colaciones dulces - Dos en Uno - Formato familiar - Envase bolsa - Contenido 300 g <br><p></p></p>
-                          <h2 class="card-price"> precio : $1.720 </h2>
-              
+                          <h2 class="card-price"> precio : $1.720 </h2>          
                           <button class="button" onclick="location.href ='../menucompra/menucom9.html'">
                             <span class="material-symbols-outlined">shopping_cart</span>
-                            COMPRAR
-              
-                          </button>
-              
-                        </div>
-              
-                      </div>
-              
-                    </div>
-             
-                  </div>
-            
+                            COMPRAR          
+                          </button>          
+                        </div>         
+                      </div>          
+                    </div>          
+                  </div>         
                 </div>
             
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselgalletas" data-bs-slide="prev">
@@ -901,86 +796,4 @@
             </div>
     
           </section>
-    
-          <footer id="final-principal">
-    
-            <div class="flex-botton">      
-              <button id="boton-final" class="button" onclick="location.href ='#'">
-                <span class="material-symbols-outlined">arrow_upward</span>
-                    Volver Inicio
-        
-                  </button>
-     
-                </div>
-     
-                <div class="center-final">
-                   <img src="../Imagenes/logoalex.png" alt="">
-                      <nav id="contactos">
-                        <h6>contacto desarrolladores</h6>
-          
-                        <a class="contact" href="https://www.instagram.com/benjaminnu2003/?hl=es-la"><span class="material-symbols-outlined">
-                          contact_support
-            
-                        </span>Benjamín-Núñez</a>
-                        
-                        <a class="contact" href="https://www.instagram.com/_3spindol4.14_/?hl=es-la"><span class="material-symbols-outlined">
-                          contact_support
-            
-                        </span>Alexander Ugalde</a>
-          
-                        <a class="contact" href="https://www.instagram.com/nikitikito2077/?hl=es-la"><span class="material-symbols-outlined">
-                          contact_support
-            
-                        </span>Nicolas Jerez</a>
-        
-                      </nav>
-        
-                      <nav id="contactos">
-                        <h6>enlases de inicio</h6>
-          
-                        <a class="contact" href="#tarjetas"><span class="material-symbols-outlined">
-                            link
-            
-                          </span>Productos</a>
-          
-                          <a class="contact" href="../s.nosotros/s.nosotros.html"><span class="material-symbols-outlined">
-                            link
-            
-                          </span>Ubicacion</a>
-          
-                          <a class="contact" href="../contactos/contactos.html"><span class="material-symbols-outlined">
-                            link
-            
-                          </span>Contactos</a>
-          
-                          <a class="contact" href="../provedores/colaborador.html"><span class="material-symbols-outlined">
-                            link
-            
-                          </span>Colaboradores</a>
-          
-        
-                        </nav>
-      
-                      </div>
-    
-                    </footer>
-    
-                    <section id="final-line">
-                      <p>@Debelopers : Benjamín-Nuñez // Alexander Ugalde // Nicolas Jerez // all rights reserved</p>
-        
-                      <div class="helado">
-        
-                        <span class="material-symbols-outlined">
-                          icecream 
-        
-                        </span>
-                      </div>
-
-    
-                    </section>
-  
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-                  </body>
-
-                  </html>
+{% endblock%}
