@@ -10,11 +10,12 @@ class Producto (models.Model):
     oferta = models.BooleanField()
     imagen = models.CharField(max_length=200) # permite agregar la ruta de la imagen
 
-    # en caso que el producto este en oferta se elimina el precio tachado.
+    
     def tachado(self):
         if self.oferta:
-            return "$"+str(round(self.precio + 1,2))
+            return "$"+str(round(self.precio + 1.2))
         return ""
+    
     #metodo para que en el menu admin no aparesca por defecto "product object" en producto
     def __str__(self):
         return self.detalle+" ("+self.codigo+")"

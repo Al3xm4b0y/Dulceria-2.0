@@ -66,17 +66,17 @@
 <!-- termino codigo carrucel de presentacion... -->
 <!-- inicio generador de productos de la dv ... -->
 <section id="catalogo">
-    {% for dulce in dulces %}
+  {% for dulce in dulces %}
     <div class="dulce">
         <div class="descripcion">
           <img src="{{dulce.imagen}}" alt="" class="imagen">
           <div class="cant-precio">
             <div class="catidad">
               <span>quedan</span>
-              <span>{{ dulce.stock}}</span>
+              <span>{{dulce.stock}}</span>
             </div>
               <div class="precio">
-                <span class="tachado">{{planta.tachado}}</span>
+                <span class="tachado">{{dulce.tachado}}</span>
                 <span>{{dulce.precio}}</span>
               </div>
           </div>
@@ -86,7 +86,7 @@
               </div>
         </div>
     </div>
-    {% endfor %}
+  {% endfor %}
 </section>
 
 {% endblock%}

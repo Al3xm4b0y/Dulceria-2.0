@@ -6,7 +6,7 @@ from .models import *
 def home(request):
     #le vamos a pasar los productos que estan ingresados en el db.
     dulces = Producto.objects.all()
-    return render(request,'core/principal.html', {'dulces' : dulces})
+    return render(request,'core/principal.html', {'dulces' :dulces})
 # creaciom de ruta hacia el archivo html 's.nosotros.html'
 def nosotros(request):
     return render(request,'core/s.nosotros.html')
